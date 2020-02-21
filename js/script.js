@@ -1,10 +1,10 @@
 console.log('NPM-GRUNT');
 
-$(document).ready(function(){
-  $('body').click(function(){
-    $(this).css('background','red');
-  });
-});
+// $(document).ready(function(){
+//   $('body').click(function(){
+//     $(this).css('background','yellow');
+//   });
+// });
 
 $(document).ready(function(){
 	// accessing key from json file
@@ -12,6 +12,15 @@ $(document).ready(function(){
 	console.log(myKey[0]);
 	myKey = myKey[0].key;
 	console.log(myKey);
+
+// filter choices
+document.getElementBYid('submit').addEventListener('click', function(){
+    country = document.getElementByid('endpoints').value;
+        size = documemt.getElementBYid('size').value;
+
+        console.log(endPoint,size);
+        var
+});
 
 //
 	$.ajax({

@@ -7,9 +7,36 @@
 
     <title>formative3-1</title>
   </head>
-  <body>
-    <h1 class="text-warning">Formative 3.1 </h1>
-    <h2 class="text-warning">News API </h>
+  <body class="container">
+    <h1 class="jumbotron text-center">News 3.1 </h1>
+    <h2 class="text-warning">News API 1  </h>
+
+    <di class="row my-5 px-2 bg-dark">
+
+      <!-- country endpoints -->
+
+    <select id="country" class="col mr-5 mt-3 mb-3 bg-danger test-dark" name="country">
+      <option value = "Japan">Japan</option>
+      <option value = "Philippines">Philippines</option>
+      <option value = "Norway">Norway</option>
+      <option value = "Morocco">Morocco</option>
+    </select>
+
+      <!-- category endpoints -->
+
+    <select id="sizes" class="col mr-5 mt-3 mb-3 bg-danger text-dark" name="sizes">
+      <option value="Business">Business</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Health">Health</option>
+      <option value="Science">Science</option>
+      <option value="Sports">Sports</option>
+      <option value="Technology">Technology</option>
+    </select>
+
+    <button id="submit" type="button" class="col mt-3 mb-3 btn btn-warning btn-lg text-light border border-light">Display </button>
+
+  </div>
+
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>

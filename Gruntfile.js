@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-    grunt.registerTask('default', ['htmlmin']);
+    grunt.registerTask('test', ['htmlmin','sass','csslint','jshint']);
     grunt.registerTask('ugly', ['uglify']);
     grunt.registerTask('default', ['watch']); //run this using grunt test
 
