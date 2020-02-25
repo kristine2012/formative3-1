@@ -6,9 +6,9 @@ $(document).ready(function() {
 
 
 
-  // #submit is the ID taken from index.html file for the submit  button 
+  // #submit is the ID taken from index.html file for the submit  button
   $('#submit').on('click', function(e) {
-    // created a variable for country and catergory the  
+    // created a variable for country and catergory the
     var country = $('#country option:selected').val();
     var category = $('#category option:selected').val();
     var searchTerm = $('#search-term').val();
@@ -25,9 +25,9 @@ $(document).ready(function() {
     }
 
     console.log('The url is %s', url);
-    
 
-    // ajax method is used to call the requested data from the newaAPI URL. 
+
+    // ajax method is used to call the requested data from the newaAPI URL.
     $.ajax({
       url : url,
 
@@ -36,14 +36,14 @@ $(document).ready(function() {
       success:function(data){
         $('#api-results').empty();
 
-        // here we are targeting the data and pulling from it are the articlesrelated to the chosen results from the country and catergory chosen.. 
+        // here we are targeting the data and pulling from it are the articlesrelated to the chosen results from the country and catergory chosen..
         if(data.articles.length > 0) {
-          $('#api-results').html(`<div class="col my-5">`);
+          $('#api-results').html(`<div class="mt-2 my-5">`);
 
-          // styled data on bootstrap card 
+          // styled data on bootstrap card
           for(var i = 0; i < data.articles.length; i++) {
             $('#api-results').append(
-              '<div class="card">'+
+              '<div class="card col col col-sm-6 col-md-3 col-lg-3 mt-3 mx-3">'+
                 `<img src="` + data.articles[i].urlToImage + `" class="card-img-top" alt="...">`+
                 '<div class="card-body">'+
                   `<h5 class="card-title">` + data.articles[i].title + `</h5>`+
@@ -57,6 +57,6 @@ $(document).ready(function() {
           $('#api-results').html('There are no results.');
         }
       }
-    }); 
+    });
   }
 });
